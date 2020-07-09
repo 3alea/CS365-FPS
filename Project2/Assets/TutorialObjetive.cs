@@ -8,14 +8,11 @@ public class TutorialObjetive : MonoBehaviour{
     public GameObject Noon;
     public GameObject Night;
     float hour = 0;
-    float speed = 15;
-
-    private
-        
+    float speed = 15;     
 
     // Start is called before the first frame update
     void Start(){
-        //hour = GameObject.Find("Clock").GetComponent<ClockUI>().hour;
+        hour = GameObject.Find("Clock").GetComponent<ClockUI>().hour;
     }
 
     // Update is called once per frame
