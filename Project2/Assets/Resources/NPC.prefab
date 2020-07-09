@@ -203,7 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DayBuilding: 0
-  MidBuilding: 0
+  NoonBuilding: 0
+  AfternoonBuilding: 0
+  DuskBuilding: 0
   NightBuilding: 0
   Velocity: 0
   SquareMeshObj: {fileID: 0}
@@ -237,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 2
-  speed: 6
+  speed: 8
   distanceTravelled: 0
 --- !u!1818360609 &1336115100954436317
 RotationConstraint:
