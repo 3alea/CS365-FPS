@@ -8,11 +8,13 @@ public class TutorialText : MonoBehaviour{
     int textToShow;
     public string WelcomeText;
     public string BasicConceptText;
+    public string BasicConceptText1;
     public string HUDText;
     public string AimText;
     public string MarkText;
     public string ShootText;
     public GameObject background;
+    public GameObject sprite;
 
     void Start(){
         textToShow = 0;
@@ -21,26 +23,36 @@ public class TutorialText : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
-
         switch (textToShow)
         {
             case 0:
                 GetComponent<UnityEngine.UI.Text>().text = WelcomeText;
+                sprite.SetActive(true);
+                background.SetActive(true);
+                gameObject.SetActive(true);
                 break;
             case 1:
                 GetComponent<UnityEngine.UI.Text>().text = BasicConceptText;
                 break;
             case 2:
-                GetComponent<UnityEngine.UI.Text>().text = HUDText;
+                GetComponent<UnityEngine.UI.Text>().text = BasicConceptText1;
                 break;
             case 3:
-                GetComponent<UnityEngine.UI.Text>().text = AimText;
+                GetComponent<UnityEngine.UI.Text>().text = HUDText;
                 break;
             case 4:
-                GetComponent<UnityEngine.UI.Text>().text = MarkText;
+                GetComponent<UnityEngine.UI.Text>().text = AimText;
                 break;
             case 5:
+                GetComponent<UnityEngine.UI.Text>().text = MarkText;
+                break;
+            case 6:
                 GetComponent<UnityEngine.UI.Text>().text = ShootText;
+                break;
+            case 7:
+                sprite.SetActive(false);
+                background.SetActive(false);
+                gameObject.SetActive(false);
                 break;
 
             default:
@@ -48,23 +60,11 @@ public class TutorialText : MonoBehaviour{
 
         }
 
-        if(textToShow == 3 && Input.GetMouseButtonDown(0)){
-            background.active = false;
-            gameObject.SetActive(false);
-        }
-
-        if (textToShow == 4 && Input.GetMouseButtonDown(0))        {
-            background.active = false;
-            gameObject.SetActive(false);
-        }
-
-        if (textToShow == 5 && Input.GetMouseButtonDown(0)){
-            background.active = false;
-            gameObject.SetActive(false);
-        }
-
-        if (Input.GetMouseButtonDown(0)){
-            textToShow++;   
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            textToShow++;
+            if (textToShow > 7)
+                textToShow = 0;
         }
 
     }
