@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;
+
 
 public class Mark : MonoBehaviour
 {
@@ -13,13 +14,15 @@ public class Mark : MonoBehaviour
     private AudioSource audio_source;
     public AudioClip shotSound;
     public Material unselected;
-    public Material selected;
+    public Material selected;
+
     Renderer rend;
     Renderer rend2;
 
     // Save the material that it has
     public Color old_color;
-    public Color old_color2;
+    public Color old_color2;
+
     public bool TutorialMode;
     public GameObject Back;
     public GameObject Text;
@@ -57,82 +60,139 @@ public class Mark : MonoBehaviour
             {
                 if (hit.collider.tag == "NPC" || hit.collider.tag == "Objective")
                 {
-                    GameObject obj       = hit.transform.gameObject;
-                    GameObject child_obj = obj.transform.GetChild(0).gameObject;
-
-                    if(!child_obj)
-                        child_obj = obj.transform.parent.gameObject;
-
-                    rend = obj.GetComponent<Renderer>();
-                    rend2 = child_obj.GetComponent<Renderer>();
-
-
-                    // Save the color of that NPC
-                    old_color = rend.material.GetColor("_Color");
-                    old_color2 = rend2.material.GetColor("_Color");
-
-
+                    GameObject obj       = hit.transform.gameObject;
+
+                    GameObject child_obj = obj.transform.GetChild(0).gameObject;
+
+
+
+                    if(!child_obj)
+
+                        child_obj = obj.transform.parent.gameObject;
+
+
+
+                    rend = obj.GetComponent<Renderer>();
+
+                    rend2 = child_obj.GetComponent<Renderer>();
+
+
+
+
+
+                    // Save the color of that NPC
+
+                    old_color = rend.material.GetColor("_Color");
+
+                    old_color2 = rend2.material.GetColor("_Color");
+
+
+
+
+
                     if (rend && rend2)
                     {
-                        if (rend.material.shader == selected.shader)
-                        {
-                            rend.material = unselected;
-                            rend.material.SetColor("_Color", old_color);
-
-                            rend2.material = unselected;
-                            rend2.material.SetColor("_Color", old_color2);
+                        if (rend.material.shader == selected.shader)
+
+                        {
+
+                            rend.material = unselected;
+
+                            rend.material.SetColor("_Color", old_color);
+
+
+
+                            rend2.material = unselected;
+
+                            rend2.material.SetColor("_Color", old_color2);
+
                         }
-                        else
-                        {
-                            rend.material = selected;
-                            rend.material.SetColor("_Color", old_color);
-
-                            rend2.material = selected;
-                            rend2.material.SetColor("_Color", old_color2);
+                        else
+
+                        {
+
+                            rend.material = selected;
+
+                            rend.material.SetColor("_Color", old_color);
+
+
+
+                            rend2.material = selected;
+
+                            rend2.material.SetColor("_Color", old_color2);
+
                         }
                     }
                 }
-                else if (hit.collider.tag == "NPC_head" || hit.collider.tag == "Objective")
+                else if (hit.collider.tag == "NPC_head" || hit.collider.tag == "Objective")
+
                 {
-                    GameObject obj = hit.transform.gameObject;
-                    GameObject child_obj = obj.transform.parent.gameObject;
-
-                    rend = obj.GetComponent<Renderer>();
-                    rend2 = child_obj.GetComponent<Renderer>();
-
-
-                    // Save the color of that NPC
-                    old_color = rend.material.GetColor("_Color");
-                    old_color2 = rend2.material.GetColor("_Color");
-
-
+                    GameObject obj = hit.transform.gameObject;
+
+                    GameObject child_obj = obj.transform.parent.gameObject;
+
+
+
+                    rend = obj.GetComponent<Renderer>();
+
+                    rend2 = child_obj.GetComponent<Renderer>();
+
+
+
+
+
+                    // Save the color of that NPC
+
+                    old_color = rend.material.GetColor("_Color");
+
+                    old_color2 = rend2.material.GetColor("_Color");
+
+
+
+
+
                     if (rend && rend2)
                     {
-                        if (rend.material.shader == selected.shader)
-                        {
-                            rend.material = unselected;
-                            rend.material.SetColor("_Color", old_color);
-
-                            rend2.material = unselected;
-                            rend2.material.SetColor("_Color", old_color2);
+                        if (rend.material.shader == selected.shader)
+
+                        {
+
+                            rend.material = unselected;
+
+                            rend.material.SetColor("_Color", old_color);
+
+
+
+                            rend2.material = unselected;
+
+                            rend2.material.SetColor("_Color", old_color2);
+
                         }
-                        else
-                        {
-                            rend.material = selected;
-                            rend.material.SetColor("_Color", old_color);
-
-                            rend2.material = selected;
-                            rend2.material.SetColor("_Color", old_color2);
+                        else
+
+                        {
+
+                            rend.material = selected;
+
+                            rend.material.SetColor("_Color", old_color);
+
+
+
+                            rend2.material = selected;
+
+                            rend2.material.SetColor("_Color", old_color2);
+
                         }
-                    }
+                    }
+
                 }
             }
         }
         else if (Input.GetMouseButtonDown(0) && shot_delay < shot_timer) 
         {
-            print("joder \n");
             //StartCoroutine(cam_shake.Shake(.15f, .4f));
-            audio_source.PlayOneShot(shotSound, 1F);
+            audio_source.PlayOneShot(shotSound, 1F);
+
             shoted = true;
             shot_timer = 0.0f;
             target_pos = camera.transform.forward * 10000;
@@ -146,18 +206,25 @@ public class Mark : MonoBehaviour
             dir.Normalize();
             rigid.AddForce(dir * bullet_speed);
             Debug.Log(target_pos);
-        }
-        //Debug.Log(camera.transform.forward);        
+        }
 
-        if (Input.GetKeyUp(KeyCode.F) && TutorialMode){
-            TutorialMode = false;
-            Back.active = true;
-            Text.active = true;
+        //Debug.Log(camera.transform.forward);
+        
+
+        if (Input.GetKeyUp(KeyCode.F) && TutorialMode){
+
+            TutorialMode = false;
+
+            Back.active = true;
+
+            Text.active = true;
+
         }
 
         if(shoted)
         {
-            end_timer += Time.deltaTime;
+            end_timer += Time.deltaTime;
+
             if (end_timer < end_delay)
                 return;
         }
