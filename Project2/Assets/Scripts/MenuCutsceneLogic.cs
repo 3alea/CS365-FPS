@@ -10,6 +10,9 @@ public class MenuCutsceneLogic : MonoBehaviour
     public List<Transform> sunObjs;
     public Vector3 sunMoveSpeed;
 
+    public Transform zoomObj;
+    public Vector3 zoomScaleSpeed;
+
     public Transform soldier;
     public Vector3 soldierMoveSpeed;
 
@@ -21,6 +24,8 @@ public class MenuCutsceneLogic : MonoBehaviour
 
     public Transform mainMenu;
     public Vector3 mainMenuSpeed;
+
+    public MenuCloudMovement eagle, plane;
 
     private float timeManager;
     private int currentPart;
@@ -46,6 +51,8 @@ public class MenuCutsceneLogic : MonoBehaviour
         switch(currentPart)
         {
             case 0:
+                zoomObj.localScale += zoomScaleSpeed * Time.deltaTime;
+
                 for (int i = 0; i < sunObjs.Count; i++)
                     sunObjs[i].position += sunMoveSpeed * Time.deltaTime;
                 break;
@@ -65,6 +72,10 @@ public class MenuCutsceneLogic : MonoBehaviour
                 break;
             case 3:
                 mainMenu.position += mainMenuSpeed * Time.deltaTime;
+                eagle.enabled = true;
+                break;
+            case 4:
+                plane.enabled = true;
                 break;
         }
     }
