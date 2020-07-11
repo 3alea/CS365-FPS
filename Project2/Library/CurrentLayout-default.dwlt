@@ -48,7 +48,11 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 88
+=======
+  controlID: 14
+>>>>>>> master
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +223,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 89
+=======
+  controlID: 15
+>>>>>>> master
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +252,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 63
+=======
+  controlID: 16
+>>>>>>> master
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,7 +267,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
   m_Name: SceneView
+=======
+  m_Name: GameView
+>>>>>>> master
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -266,14 +282,23 @@ MonoBehaviour:
     height: 574
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+<<<<<<< HEAD
   m_ActualView: {fileID: 17}
+=======
+  m_ActualView: {fileID: 18}
+>>>>>>> master
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 13}
   - {fileID: 12}
+<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
+=======
+  m_Selected: 2
+  m_LastSelected: 0
+>>>>>>> master
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,10 +347,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 403
     y: 73
     width: 962
     height: 553
+=======
+    x: 329
+    y: 73
+    width: 1266
+    height: 613
+>>>>>>> master
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 MonoBehaviour:
@@ -376,10 +408,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a84e0000
     m_LastClickedID: 20136
     m_ExpandedIDs: 00000000a84e0000aa4e0000ac4e0000ae4e0000044f0000
+=======
+    scrollPos: {x: 0, y: 4}
+    m_SelectedIDs: b2510000
+    m_LastClickedID: 20914
+    m_ExpandedIDs: 000000008e510000905100009251000094510000
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -407,7 +446,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a84e0000aa4e0000ac4e0000ae4e0000
+=======
+    m_ExpandedIDs: 000000008e510000905100009251000094510000
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -530,9 +573,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: ec4e0000
       m_LastClickedID: 0
       m_ExpandedIDs: 40fbffffdc4b0000484c0000904c0000
+=======
+      m_SelectedIDs: 3a6d0000
+      m_LastClickedID: 27962
+      m_ExpandedIDs: 50bbffff5abfffff10c0ffffe2c2ffff40fbffffe46d00000c6e0000f86f0000
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -592,9 +641,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 1052.3983, y: 310.44696, z: 5499.342}
     speed: 2
     m_Value: {x: 1052.3983, y: 310.44696, z: 5499.342}
+=======
+    m_Target: {x: 1313.5652, y: 171.8303, z: 1069.5416}
+    speed: 2
+    m_Value: {x: 1313.5652, y: 171.8303, z: 1069.5416}
+>>>>>>> master
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -640,13 +695,21 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.0041850735, y: 0.054279555, z: 0.00023242735, w: 0.99856937}
+=======
+    m_Target: {x: -0.038942676, y: 0.5005808, z: 0.021914972, w: 0.8647517}
+>>>>>>> master
     speed: 2
     m_Value: {x: -0.004184855, y: 0.05427672, z: 0.00023241522, w: 0.9985172}
   m_Size:
     m_Target: 2696.9014
     speed: 2
+<<<<<<< HEAD
     m_Value: 2696.9014
+=======
+    m_Value: 732.95953
+>>>>>>> master
   m_Ortho:
     m_Target: 0
     speed: 2

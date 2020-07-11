@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":284.8937683105469,"y":331.0906982421875,"z":-120.40132141113281},"rotation":{"x":0.45999711751937868,"y":-0.30044540762901308,"z":0.16833753883838654,"w":0.8185979127883911},"size":128.29698181152345,"orthographic":false}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":1313.565185546875,"y":171.83030700683595,"z":1069.5416259765625},"rotation":{"x":-0.03894267603754997,"y":0.5005807876586914,"z":0.021914971992373468,"w":0.8647516965866089},"size":732.9595336914063,"orthographic":false}
 >>>>>>> Balea_WaterShader2
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":1313.565185546875,"y":171.83030700683595,"z":1069.5416259765625},"rotation":{"x":-0.03894267603754997,"y":0.5005807876586914,"z":0.021914971992373468,"w":0.8647516965866089},"size":732.9595336914063,"orthographic":false}
+>>>>>>> master
