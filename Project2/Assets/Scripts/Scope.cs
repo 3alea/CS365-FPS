@@ -19,21 +19,30 @@ public class Scope : MonoBehaviour
     private float aiming_time;
     private float aiming_vel;
     private GameObject rifle;
-
+    float currentFOV;
+ 
     private void Start()
     {
         rifle = GameObject.Find("Rifle");
         aiming_time = 0.2f;
         aiming_vel = 0.1f;
+        currentFOV = FOV_notScoped;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (isScoped == true && Camera.main.fieldOfView / currentFOV < 1.5f)
+        {
+            scopeOverlay.SetActive(true);
+        }
+        else
+        {
+            scopeOverlay.SetActive(false);
+        }
         
-        isScoped = false;
-        scopeOverlay.SetActive(isScoped);
-        Camera.main.fieldOfView = FOV_notScoped;
+        Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView,currentFOV,0.15f);
 
         if (Input.GetButton("Fire2"))
         {
@@ -44,13 +53,14 @@ public class Scope : MonoBehaviour
             else
             {
                 isScoped = true;
-                scopeOverlay.SetActive(isScoped);
-                Camera.main.fieldOfView = FOV_Scoped;
+                currentFOV = FOV_Scoped;
             }
         }
         else
         {
             timer = 0;
+            isScoped = false;
+            currentFOV = FOV_notScoped;
         }
 
         if (Input.GetMouseButtonUp(1) && TutorialMode) {

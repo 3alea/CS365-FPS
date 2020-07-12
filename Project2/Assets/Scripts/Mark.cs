@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Mark : MonoBehaviour
 {
@@ -10,7 +10,6 @@ public class Mark : MonoBehaviour
     public GameObject bulletGenerator;
     public GameObject bullet;
     public GameObject camera;
-
     private AudioSource audio_source;
     public AudioClip shotSound;
     public Material unselected;
@@ -50,7 +49,8 @@ public class Mark : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Ray aimLine = new Ray(camera.transform.position + camera.transform.forward* 10, camera.transform.forward);
+        Vector3 startPos = camera.transform.position + camera.transform.forward * 10;
+        Ray aimLine = new Ray(startPos, camera.transform.forward);
 
         //Done this way duplicating code so raycast is not computed unless you 
         //click or you press F
@@ -196,15 +196,30 @@ public class Mark : MonoBehaviour
             shoted = true;
             shot_timer = 0.0f;
             target_pos = camera.transform.forward * 10000;
+            //just copypasted code lol
+            if (Physics.Raycast(aimLine, out hit, 1000))
+            {
+                if (hit.collider.gameObject.tag == "NPC" || hit.collider.gameObject.tag == "NPC_head")
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    SceneManager.LoadScene("Loose");
+                }
+                else if (hit.collider.gameObject.tag == "Objective")
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    SceneManager.LoadScene("Win");
+                }
+            }
 
-            if (Physics.Raycast(aimLine, out hit, 10000))
+                    if (Physics.Raycast(aimLine, out hit, 10000))
                 target_pos = hit.point;
-
-            GameObject instbullet = Instantiate(bullet, bulletGenerator.transform.position, Quaternion.identity) as GameObject;
-            Rigidbody rigid = instbullet.GetComponent<Rigidbody>();
-            Vector3 dir = new Vector3(target_pos.x - instbullet.transform.position.x, target_pos.y - instbullet.transform.position.y, target_pos.z - instbullet.transform.position.z);
-            dir.Normalize();
-            rigid.AddForce(dir * bullet_speed);
+             
+            //WE REMOVED THE BALL THING BUT COMMENTED ANYWAYS TO GO BACK
+            //GameObject instbullet = Instantiate(bullet, bulletGenerator.transform.position, Quaternion.identity) as GameObject;
+            //Rigidbody rigid = instbullet.GetComponent<Rigidbody>();
+            //Vector3 dir = new Vector3(target_pos.x - instbullet.transform.position.x, target_pos.y - instbullet.transform.position.y, target_pos.z - instbullet.transform.position.z);
+            //dir.Normalize();
+            //rigid.AddForce(dir * bullet_speed);
             Debug.Log(target_pos);
         }
 
