@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class mouseCursor : MonoBehaviour
 {
+    public RectTransform cursor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,8 @@ public class mouseCursor : MonoBehaviour
     void Update()
     {
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        //cursor.transform.position = cursorPos;
+        cursor.position = Input.mousePosition;
+        Debug.Log("Mouse Pos: " + Input.mousePosition);
     }
 }
