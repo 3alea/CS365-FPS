@@ -1,0 +1,2 @@
+C:\Users\diego\Desktop\CS365\CS365-FPS\Project2\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\diego\Desktop\CS365\CS365-FPS\Project2\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
