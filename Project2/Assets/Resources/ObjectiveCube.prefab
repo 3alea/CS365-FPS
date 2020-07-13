@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55f21087192297b4889728d4bc20f977, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55f21087192297b4889728d4bc20f977, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,7 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DayBuilding: 0
-  MidBuilding: 0
+  NoonBuilding: 0
+  AfternoonBuilding: 0
+  DuskBuilding: 0
   NightBuilding: 0
   Velocity: 10
   SquareMeshObj: {fileID: 5395224155778455014, guid: e2fedbb9b788fa147a9d1976efe2545e,
@@ -223,6 +225,7 @@ MonoBehaviour:
   SquareHead: 0
   BodyColor: {r: 0, g: 0, b: 0, a: 0}
   HeadColor: {r: 0, g: 0, b: 0, a: 0}
+  Follower: {fileID: 0}
 --- !u!1818360609 &4222673600846676405
 RotationConstraint:
   m_ObjectHideFlags: 0
