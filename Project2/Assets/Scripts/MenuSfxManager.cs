@@ -7,6 +7,7 @@ public class MenuSfxManager : MonoBehaviour
     public AudioClip gunShot;
     public AudioClip reload;
     static AudioSource audioSrc;
+    UnityEngine.UI.Image spark;
 
     // Time between each shot
     float time = 0.2f;
@@ -24,6 +25,8 @@ public class MenuSfxManager : MonoBehaviour
         needToReload = false;
         timeToReload = 0.5f;
         audioSrc = GetComponent<AudioSource>();
+        spark = GetComponent<UnityEngine.UI.Image>();
+        spark.enabled = false;
     }
 
     // Update is called once per frame
@@ -37,7 +40,7 @@ public class MenuSfxManager : MonoBehaviour
                 playerHasShot = true;
                 needToReload = false;
                 timer = 0.0f;
-
+                spark.enabled = true;
                 // Play sound
                 audioSrc.PlayOneShot(gunShot);
             }
@@ -59,6 +62,9 @@ public class MenuSfxManager : MonoBehaviour
 
         // Update the timer
         timer += Time.deltaTime;
+
+        if (timer >= time - 0.1f)
+            spark.enabled = false;
 
         // Check if enough time has passed since
         // the player shot
