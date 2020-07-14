@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ac1750986b92011409e3bbcfd2b67f55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 168.11
+      value: 234.8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ac1750986b92011409e3bbcfd2b67f55,
         type: 3}
@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TallSign
       objectReference: {fileID: 0}
+    - target: {fileID: 5476583171380433652, guid: ac1750986b92011409e3bbcfd2b67f55,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 69ea3ec5b96a5f04686d41960efe5651, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1750986b92011409e3bbcfd2b67f55, type: 3}
 --- !u!1 &567647871
